@@ -1,0 +1,107 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <div class="banner">
+    <img src="../static/images/banner.png"  class="" alt="banner">
+    </div>
+    <div class="list-container">
+    <div class="vid-list">
+    <a href="./videoplayer.html"><img src="../static/images/thumbnail1.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created 
+                for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    <div class="vid-list">
+    <a href="#"><img src="../static/images/thumbnail2.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created
+                    for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    <div class="vid-list">
+    <a href="#"><img src="../static/images/thumbnail3.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created
+                    for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    <div class="vid-list">
+    <a href="#"><img src="../static/images/thumbnail4.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created
+                    for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    <div class="vid-list">
+    <a href="#"><img src="../static/images/thumbnail5.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created
+                    for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    <div class="vid-list">
+    <a href="#"><img src="../static/images/thumbnail6.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created
+                    for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    <div class="vid-list">
+    <a href="#"><img src="../static/images/thumbnail7.png" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">This is the video focused on Frontend development.This is created
+                    for absolute begineers.we also have other videos. </a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    {% for i in VDB %}
+    <div class="vid-list">
+    <a href="{{url_for('player',V=i.vurl)}}"><img src="{{i.turl}}" class="thumbnail" alt="1"></a>
+    <div class="flex-div">
+        <img src="../static/images/Jack.png" alt="">
+        <div class="vid-info">
+            <a href="#">{{i.name}}</a>
+            <p>Happy students</p>
+            <p>1M views, 2 days</p>
+        </div>
+    </div>
+    </div>
+    {%endfor%}
+
+    </div>
+{%endblock%}

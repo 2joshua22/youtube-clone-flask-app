@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block content%}
+    <h1>Upload Videos</h1>
+    <div class="form">
+        <form method="POST">
+            <label>Video Url: <input type="text" name="vurl"></label>
+            <label>Thumbnail Url: <input type="text" name="turl"></label>
+            <label>Name: <input type="text" name="name"></label>
+            <label>Description: <input type="text" name="des"></label>
+            <input type="submit" value="upload">
+        </form>
+    </div>
+    <br>
+    <div class="table">
+        <h1>Your Videos</h1>
+        <table>
+            <tr>
+                <th># </th>
+                <th>Name</th>
+                <th>Delete</th>
+            </tr>
+            {%for i in VDB%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td><a href="{{url_for('delete',I=i.id)}}"><img src="../static/images/delete.png"></a></td>
+            {%endfor%}
+        </table>
+    </div>
+{%endblock%}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Youtube</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/css/style.css'>
+    
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div ">
+            <img src="../static/images/menu.png" class="menu-icon">
+            <a href="{{url_for('home')}}"><img src="../static/images/logo.png" class="logo"></a>
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <img src="../static/images/search.png" alt="search">
+            </div>
+            <img src="../static/images/voice-search.png" class="mic-icon" alt="voice_search">
+        </div>
+        <div class="nav-right flex-div">   
+            <a href="{{url_for('upload')}}"><img src="../static/images/upload.png" alt="upload"></a> 
+            <img src="../static/images/more.png" alt="more">
+            <img src="../static/images/notification.png" alt="notification">
+            <img src="../static/images/simon.png" class="user-icon" alt="profile">
+        </div>
+    </nav>
+    <div class="sidebar">
+        <div class="shortcut-links">
+            <a href="#"> <img src="../static/images/home.png" alt="home"><p>Home</p></a>
+            <a href="#"> <img src="../static/images/explore.png" alt="home"><p>Explore</p></a>
+            <a href="#"> <img src="../static/images/subscription.png" alt="home"><p>Subscription</p></a>
+            <a href="#"> <img src="../static/images/library.png" alt="home"><p>Library</p></a>
+            <a href="#"> <img src="../static/images/history.png" alt="home"><p>History</p></a>
+            <a href="#"> <img src="../static/images/playlist.png" alt="home"><p>Playlist</p></a>
+            <a href="#"> <img src="../static/images/messages.png" alt="home"><p>Messages</p></a>
+            <a href="#"> <img src="../static/images/show-more.png" alt="home"><p>Show More</p></a>
+            <hr>
+
+        </div>
+        <div class="subscribed-list">
+            <h3>Subscribed</h3>
+            <a href="#"> <img src="../static/images/Jack.png" alt="home"><p>Python</p></a>
+            <a href="#"> <img src="../static/images/simon.png" alt="home"><p>Java</p></a>
+            <a href="#"> <img src="../static/images/tom.png" alt="home"><p>Javascript</p></a>
+            <a href="#"> <img src="../static/images/megan.png" alt="home"><p>React</p></a>
+            <a href="#"> <img src="../static/images/cameron.png" alt="home"><p>C</p></a>
+            <a href="#"> <img src="../static/images/jack.png" alt="home"><p>C++</p></a>
+         
+            
+            
+        </div>
+    </div>
+    <div class="container">
+        {%block content%}
+        {%endblock%}
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
